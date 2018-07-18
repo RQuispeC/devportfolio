@@ -34,12 +34,14 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+$base-color: #5a96df;
 $base-color-hover: darken($base-color, 10%);
+$base-color-transparent:rgba($base-color, 0.4);
 
 // Define background colors
 $background: #fff;
 $background-alt: #f2f2f5;
+$background-transparent: rgba($background, 0.0);
 
 // Define border colors
 $border: #dcd9d9;
@@ -145,16 +147,16 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    text-align: center;
+    text-align: right;
     z-index: 10;
     animation-name: dropHeader;
     animation-iteration-count: 1;
     animation-timing-function: ease;
-    animation-duration: 0.75s;
+    animation-duration: 1s;
 
     ul {
         display: inline-block;
-        background: $background;
+        background: $background-transparent;
         text-align: center;
         padding: 10px;
         margin: 0;
@@ -168,18 +170,20 @@ header {
 
     a {
         display: block;
-        color: $base-color;
-        padding: 10px;
+        color: white;
+        padding: 12px;
+        font-weight: bold;
+        font-size: 18px;
 
         &:hover {
-            color: $base-color-hover;
+            color: rgb(49, 49, 49);
             text-decoration: none;
-            background: #eee;
+            //background: rgba($background, 0.25);
             border-radius: 4px;
         }
 
         &:focus {
-            color: $base-color;
+            color: #575c63;
             text-decoration: none;
         }
     }
@@ -297,7 +301,7 @@ footer {
     color: #fff;
     padding: 15px 25px;
     border: 3px solid #fff;
-    border-radius: 30px;
+    border-radius: 15px;
     @include transition();
 
     &:hover {
@@ -350,7 +354,8 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    /* image blend: f9f063 to 1a6cf3*/
+    background: url(../images/banner_4.jpg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -378,7 +383,7 @@ footer {
     }
 
     h2 {
-        color: lighten($base-color, 25%);
+        color: lighten($base-color, 40%);
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
@@ -393,7 +398,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.8);
+    background: rgba($base-color-hover, 0.1);
     z-index: 1;
 }
 
@@ -533,6 +538,10 @@ footer {
         font-size: 0.9em;
         margin: 0;
     }
+
+    a {
+        color: $base-color;
+    }
 }
 
 .vtimeline-point {
@@ -622,6 +631,10 @@ footer {
     ul {
         padding: 0 0 0 15px;
     }
+
+    a {
+        color: $base-color;
+    }
 }
 
 /*
@@ -639,8 +652,15 @@ footer {
         color: $heading;
         margin-bottom: 50px;
     }
-}
 
+    a {
+        color: $base-color;
+    }
+}
+#more-projects {
+    margin-left: 0px;
+    margin-right: 0px;
+}
 .project {
     position: relative;
     max-width: 900px;
@@ -915,6 +935,13 @@ footer {
         animation: none;
         bottom: 0;
         height: 100%;
+        ul {
+            background: $background;
+        }
+        a {
+            color: $base-color;
+            font-weight: normal;
+        }
     }
 
     #mobile-menu-open, #mobile-menu-close {
@@ -944,7 +971,7 @@ footer {
         }
 
         a {
-            padding: 10px 20px;
+            padding: 5px 20px;
         }
     }
 
