@@ -480,6 +480,28 @@ footer {
     }
 }
 
+
+/*
+    ---------------------------
+    ----- 7. News -----
+    ---------------------------
+*/
+
+#news {
+    padding: 75px 15px;
+    border-bottom: 1px solid $border;
+
+    h2 {
+        color: $heading;
+    }
+
+    p {
+        color: $text;
+        margin: 0;
+    }
+}
+
+
 #experience-timeline {
     margin: 30px auto 0 auto;
     position: relative;
@@ -916,6 +938,14 @@ footer {
     }
 
     #about {
+        text-align: center;
+
+        p {
+            text-align: left;
+        }
+    }
+
+    #news {
         text-align: center;
 
         p {
